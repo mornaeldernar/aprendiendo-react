@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Square } from './components/Saquare';
 import { TURNS } from "./constants";
 import confetti from 'canvas-confetti'
 import { checkWinner, checkEndGame } from "./logic/board";
@@ -30,6 +29,7 @@ function App() {
 
   const updateBoard = (index) => {
     if(board[index]) return 
+    if(winner !== null) return 
     const newBoard = [...board]
     newBoard[index] = turn
     setBoard(newBoard)

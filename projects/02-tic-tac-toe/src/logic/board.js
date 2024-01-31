@@ -1,9 +1,6 @@
 export const checkWinner = (boardToCheck) => {
     
     const board = [...boardToCheck];
-    //let boardCheck = [...boardToCheck]
-
-    //while(boardCheck.length) board.push(boardCheck.splice(0,3))
     //Revisamos combinaciones ganadores
     for(let i = 0; i < 3; i++){
         let row = i*3
